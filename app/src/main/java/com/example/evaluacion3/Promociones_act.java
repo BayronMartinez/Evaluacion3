@@ -48,18 +48,21 @@ public class Promociones_act extends AppCompatActivity {
             {
                 total = promo1 + costoE;
                 texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
+                String totalS = Integer.toString(total);
                 precio.setText(total);
             }
             if (promo.equals("master pizza"))
             {
                 total = promo2 + costoE;
                 texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
+                String totalS = Integer.toString(total);
                 precio.setText(total);
             }
             if (promo.equals("pizza max"))
             {
                 total = promo3 + costoE;
                 texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
+                String totalS = Integer.toString(total);
                 precio.setText(total);
             }
             else
