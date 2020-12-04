@@ -36,85 +36,41 @@ public class Promociones_act extends AppCompatActivity {
     {
         String promo = promocion.getText().toString().toLowerCase();
         int costoE = Integer.parseInt(envio.getText().toString());
-        if (promo.equals("pizzas promo"))
+        String nombre = spiner.getSelectedItem().toString();
+        int promo1 = 5990;
+        int promo2 = 12990;
+        int promo3 = 18500;
+        int total = 0;
+
+        if (false == spiner.getSelectedItem().toString().equals("Clientes"))
         {
-            if (spiner.getSelectedItem().toString().equals("Ramiro"))
+            if (promo.equals("pizzas promo"))
             {
-                int total = 5990 + costoE;
-                texto.setText("Estimado Ramiro el final segun la promocion y envio es");
+                total = promo1 + costoE;
+                texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
                 precio.setText(total);
             }
-            else if (spiner.getSelectedItem().toString().equals("Rosa"))
+            if (promo.equals("master pizza"))
             {
-                int total = 5990 + costoE;
-                texto.setText("Estimada Rosa el final segun la promocion y envio es");
+                total = promo2 + costoE;
+                texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
                 precio.setText(total);
             }
-            else if (spiner.getSelectedItem().toString().equals("Robert"))
+            if (promo.equals("pizza max"))
             {
-                int total = 5990 + costoE;
-                texto.setText("Estimado Robert el final segun la promocion y envio es");
+                total = promo3 + costoE;
+                texto.setText("Estimado " + nombre + " el final segun la promocion y envio es");
                 precio.setText(total);
             }
             else
             {
-                Toast.makeText(getApplicationContext(), "Elija cliente", Toast.LENGTH_SHORT).show();
-            }
-        }
-        else if (promo.equals("master pizza"))
-        {
-            if (spiner.getSelectedItem().toString().equals("Ramiro"))
-            {
-                int total = 12990 + costoE;
-                texto.setText("Estimado Ramiro el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else if (spiner.getSelectedItem().toString().equals("Rosa"))
-            {
-                int total = 12990 + costoE;
-                texto.setText("Estimada Rosa el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else if (spiner.getSelectedItem().toString().equals("Robert"))
-            {
-                int total = 12990 + costoE;
-                texto.setText("Estimado Robert el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else
-            {
-                Toast.makeText(getApplicationContext(), "Elija cliente", Toast.LENGTH_SHORT).show();
-            }
-        }
-        else if (promo.equals("pizza max"))
-        {
-            if (spiner.getSelectedItem().toString().equals("Ramiro"))
-            {
-                int total = 18500 + costoE;
-                texto.setText("Estimado Ramiro el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else if (spiner.getSelectedItem().toString().equals("Rosa"))
-            {
-                int total = 18500 + costoE;
-                texto.setText("Estimada Rosa el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else if (spiner.getSelectedItem().toString().equals("Robert"))
-            {
-                int total = 18500 + costoE;
-                texto.setText("Estimado Robert el final segun la promocion y envio es");
-                precio.setText(total);
-            }
-            else
-            {
-                Toast.makeText(getApplicationContext(), "Elija cliente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Elija una promocion existente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Pizzas promo, Master pizza, Pizza max", Toast.LENGTH_SHORT).show();
             }
         }
         else
         {
-            Toast.makeText(getApplicationContext(), "Elija una promocion existente", Toast.LENGTH_SHORT).show();
-            Toast.makeText(getApplicationContext(), "Pizzas promo, Master pizza, Pizza max", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Elija cliente", Toast.LENGTH_SHORT).show();
         }
     }
 }
